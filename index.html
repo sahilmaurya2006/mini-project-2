@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="REPZONE — Premium Gym Management System & Mindful Fitness Studio. Experience strength with intention.">
+  <meta name="theme-color" content="#F5F4EF">
+  <title>REPZONE — Strength, with intention.</title>
+
+  <!-- Typography: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans (Modern Clean Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <a href="#" class="brand-logo" id="brand-logo" aria-label="REPZONE Home">
+        <span class="logo-text">REPZONE</span>
+        <span class="logo-sub">STUDIO &bull; MANAGEMENT</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="main-nav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active" data-view="landing">Overview</a>
+        <a href="#experience" class="nav-link" data-view="landing">Kinetic Experience</a>
+        <a href="#philosophy" class="nav-link" data-view="landing">Philosophy</a>
+        <a href="#plans" class="nav-link" data-view="landing">Membership</a>
+        <a href="#dashboard" class="nav-link nav-link-portal" id="nav-dashboard-link" data-view="dashboard">Management Portal</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button type="button" class="btn btn-outline" id="btn-toggle-view" aria-label="Toggle Dashboard">
+          <span class="toggle-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
+          </span>
+          <span class="toggle-text">Gym Portal</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <span class="brand-logo">REPZONE</span>
+        <button type="button" class="mobile-close-btn" id="mobile-close-btn" aria-label="Close menu">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="#hero" class="mobile-link" data-view="landing">Overview</a>
+        <a href="#experience" class="mobile-link" data-view="landing">Kinetic Experience</a>
+        <a href="#philosophy" class="mobile-link" data-view="landing">Philosophy</a>
+        <a href="#plans" class="mobile-link" data-view="landing">Membership</a>
+        <a href="#dashboard" class="mobile-link mobile-link-accent" data-view="dashboard">Management Portal</a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <p class="tagline">Strength, with intention.</p>
+        <span class="copyright">&copy; 2026 REPZONE Systems</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN WRAPPER -->
+  <main id="main-content">
+
+    <!-- ======================================================== -->
+    <!-- SECTION 1: CINEMATIC LANDING VIEW                       -->
+    <!-- ======================================================== -->
+    <div id="landing-view" class="view-section active-view">
+
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero">
+        <div class="hero-background-glow" aria-hidden="true"></div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <div class="hero-eyebrow">
+              <span class="eyebrow-dot"></span>
+              <span class="eyebrow-text">Refined Physical Culture</span>
+            </div>
+            <h1 class="hero-title">
+              Strength,<br>
+              <em>with intention.</em>
+            </h1>
+            <p class="hero-description">
+              A minimalist fitness sanctuary crafted for deliberate conditioning, neuromuscular precision, and uncompromising discipline. No chaotic noise. Just purposeful form.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#experience" class="btn btn-primary">
+                Experience Kinetics
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="btn btn-secondary" id="hero-portal-btn">
+                Launch Portal
+              </button>
+            </div>
+
+            <!-- Hero Metrics Ticker -->
+            <div class="hero-metrics-bar">
+              <div class="hero-metric-item">
+                <span class="metric-num">320+</span>
+                <span class="metric-label">Active Members</span>
+              </div>
+              <div class="hero-metric-divider"></div>
+              <div class="hero-metric-item">
+                <span class="metric-num">98.4%</span>
+                <span class="metric-label">Retention Rate</span>
+              </div>
+              <div class="hero-metric-divider"></div>
+              <div class="hero-metric-item">
+                <span class="metric-num">1:6</span>
+                <span class="metric-label">Coach Ratio</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Editorial Visual Showcase -->
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-card">
+              <img src="assets/images/hero.jpg" alt="REPZONE athlete training in architectural studio" class="hero-img" loading="eager">
+              <div class="hero-image-overlay">
+                <div class="overlay-badge">
+                  <span class="pulse-indicator"></span>
+                  <span>Form &bull; Biomechanics &bull; Focus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3D-inspired Fitness Experience: Scroll-Controlled Bicep Curl -->
+      <section class="curl-experience-section" id="experience">
+        <div class="curl-track-container" id="curl-track">
+          <!-- Sticky Viewport Lock -->
+          <div class="curl-sticky-viewport">
+            
+            <!-- Section Header (Fades smoothly as curl commences) -->
+            <div class="curl-section-header container">
+              <div class="section-tag">Biomechanical Kinetic Engine</div>
+              <h2 class="section-heading">The Anatomy of Movement</h2>
+              <p class="section-subtext">
+                Scroll to scrub through the biomechanical execution of a dumbbell bicep curl. Notice the progressive forearm angle, elbow stability, and peak concentric tension.
+              </p>
+            </div>
+
+            <!-- Canvas Display Frame -->
+            <div class="curl-stage-wrapper">
+              <div class="curl-canvas-container" id="curl-canvas-container">
+                <!-- High-performance HTML5 Canvas -->
+                <canvas id="curl-canvas" width="1200" height="900" aria-label="Interactive bicep curl sequence animation"></canvas>
+
+                <!-- Kinetic HUD Data Overlay -->
+                <div class="curl-hud-overlay">
+                  <div class="hud-panel hud-top-left">
+                    <span class="hud-label">Kinetic Stage</span>
+                    <span class="hud-value" id="hud-stage-name">Phase 01: Setup</span>
+                  </div>
+
+                  <div class="hud-panel hud-top-right">
+                    <span class="hud-label">Joint Flexion</span>
+                    <span class="hud-value" id="hud-angle-val">180°</span>
+                  </div>
+
+                  <div class="hud-panel hud-bottom-left">
+                    <span class="hud-label">Target Muscle</span>
+                    <span class="hud-value">Biceps Brachii &bull; Brachialis</span>
+                  </div>
+
+                  <div class="hud-panel hud-bottom-right">
+                    <span class="hud-label">Rep Execution</span>
+                    <span class="hud-value" id="hud-progress-val">0%</span>
+                  </div>
+                </div>
+
+                <!-- Fallback Notification (Hidden when canvas renders) -->
+                <div class="curl-fallback-message" id="curl-fallback">
+                  <div class="fallback-card">
+                    <h4>Photo Sequence Stream Active</h4>
+                    <p>Rendering photographic frames from <code>assets/athlete-frames/</code>.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Scroll Indicator Pill -->
+              <div class="scroll-instruction-pill">
+                <span class="scroll-arrow-anim">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </span>
+                <span id="scroll-prompt-text">Scroll down to curl &bull; Scroll up to release</span>
+              </div>
+            </div>
+
+            <!-- Phase Scrub Indicator Timeline -->
+            <div class="curl-timeline-container container">
+              <div class="curl-timeline-bar">
+                <div class="timeline-fill" id="timeline-fill"></div>
+              </div>
+              <div class="timeline-checkpoints">
+                <span class="checkpoint active" id="cp-1">01 Starting Form</span>
+                <span class="checkpoint" id="cp-2">02 Dynamic Flexion</span>
+                <span class="checkpoint" id="cp-3">03 Peak Contraction</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Brand Philosophy Section -->
+      <section class="philosophy-section" id="philosophy">
+        <div class="container">
+          <div class="philosophy-header">
+            <span class="section-tag">Brand Philosophy</span>
+            <blockquote class="editorial-quote">
+              &ldquo;We reject chaotic noise in pursuit of deliberate form. True strength is not born of haste, but of unwavering intention.&rdquo;
+            </blockquote>
+          </div>
+
+          <!-- Studio Feature Showcase -->
+          <div class="philosophy-media-grid">
+            <div class="philosophy-image-box">
+              <img src="assets/images/studio.jpg" alt="REPZONE sanctuary studio interior" class="studio-img" loading="lazy">
+              <div class="image-caption">
+                <span class="caption-title">The Sanctuary</span>
+                <span class="caption-desc">Limestone, natural oak, and diffused daylight engineered for mental clarity.</span>
+              </div>
+            </div>
+
+            <div class="philosophy-pillars">
+              <div class="pillar-card">
+                <div class="pillar-num">01</div>
+                <h3 class="pillar-title">Mindful Conditioning</h3>
+                <p class="pillar-text">
+                  Movement without awareness is merely fatigue. Every session prioritizes neurological connection, postural integrity, and deep kinetic presence.
+                </p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-num">02</div>
+                <h3 class="pillar-title">Biomechanical Precision</h3>
+                <p class="pillar-text">
+                  Custom-milled equipment, ergonomic load vectors, and individual anatomical adjustments ensure joint longevity alongside maximal muscular recruitment.
+                </p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-num">03</div>
+                <h3 class="pillar-title">Sustained Performance</h3>
+                <p class="pillar-text">
+                  Sustainable physical excellence. We balance high-intensity output with active nervous system restoration and intelligent recovery protocols.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Membership Plans Section -->
+      <section class="plans-section" id="plans">
+        <div class="container">
+          <div class="plans-header text-center">
+            <span class="section-tag">Curated Memberships</span>
+            <h2 class="section-heading">Commitment to Form</h2>
+            <p class="section-subtext">
+              Select an intentional tier crafted for dedicated athletes. All memberships include access to our management portal.
+            </p>
+          </div>
+
+          <div class="plans-grid">
+            <!-- Plan 1: Essential -->
+            <div class="plan-card" data-plan="Essential">
+              <div class="plan-header">
+                <span class="plan-badge">Foundation</span>
+                <h3 class="plan-name">Essential</h3>
+                <div class="plan-price">
+                  <span class="currency">$</span>
+                  <span class="amount">120</span>
+                  <span class="period">/ month</span>
+                </div>
+                <p class="plan-summary">Pure floor access during standard studio hours with full biometric check-in tracking.</p>
+              </div>
+              <ul class="plan-features">
+                <li><span class="check-icon">&check;</span> Full open studio access</li>
+                <li><span class="check-icon">&check;</span> Digital portal & attendance logs</li>
+                <li><span class="check-icon">&check;</span> Locker & amenities access</li>
+                <li><span class="check-icon">&check;</span> Standard induction session</li>
+              </ul>
+              <div class="plan-action">
+                <button type="button" class="btn btn-outline plan-select-btn" data-plan-tier="Essential">Join Essential</button>
+              </div>
+            </div>
+
+            <!-- Plan 2: Performance (Featured) -->
+            <div class="plan-card featured-plan" data-plan="Performance">
+              <div class="featured-ribbon">Most Preferred</div>
+              <div class="plan-header">
+                <span class="plan-badge badge-sage">Comprehensive</span>
+                <h3 class="plan-name">Performance</h3>
+                <div class="plan-price">
+                  <span class="currency">$</span>
+                  <span class="amount">220</span>
+                  <span class="period">/ month</span>
+                </div>
+                <p class="plan-summary">Unlimited priority studio access, monthly biomechanical reviews, and tailored coaching.</p>
+              </div>
+              <ul class="plan-features">
+                <li><span class="check-icon">&check;</span> Unlimited studio access (24/7)</li>
+                <li><span class="check-icon">&check;</span> Monthly form & kinetic analysis</li>
+                <li><span class="check-icon">&check;</span> Dedicated personal recovery suite</li>
+                <li><span class="check-icon">&check;</span> Cold plunge & infrared sauna</li>
+                <li><span class="check-icon">&check;</span> Priority portal reservation</li>
+              </ul>
+              <div class="plan-action">
+                <button type="button" class="btn btn-primary plan-select-btn" data-plan-tier="Performance">Join Performance</button>
+              </div>
+            </div>
+
+            <!-- Plan 3: Unlimited -->
+            <div class="plan-card" data-plan="Unlimited">
+              <div class="plan-header">
+                <span class="plan-badge">Private Sanctuary</span>
+                <h3 class="plan-name">Unlimited</h3>
+                <div class="plan-price">
+                  <span class="currency">$</span>
+                  <span class="amount">350</span>
+                  <span class="period">/ month</span>
+                </div>
+                <p class="plan-summary">Full private suite access, bespoke weekly coaching, and complete holistic wellness suite.</p>
+              </div>
+              <ul class="plan-features">
+                <li><span class="check-icon">&check;</span> All Performance privileges</li>
+                <li><span class="check-icon">&check;</span> 4 weekly 1-on-1 private sessions</li>
+                <li><span class="check-icon">&check;</span> Custom nutrition & load profiling</li>
+                <li><span class="check-icon">&check;</span> Guest passes (4 per month)</li>
+                <li><span class="check-icon">&check;</span> Concierge booking service</li>
+              </ul>
+              <div class="plan-action">
+                <button type="button" class="btn btn-outline plan-select-btn" data-plan-tier="Unlimited">Join Unlimited</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editorial Footer -->
+      <footer class="site-footer">
+        <div class="container footer-container">
+          <div class="footer-brand">
+            <span class="logo-text">REPZONE</span>
+            <p class="footer-desc">
+              Premium physical sanctuary and minimal gym intelligence. Crafted for strength with intention.
+            </p>
+          </div>
+          <div class="footer-links-group">
+            <div class="footer-col">
+              <h5>Studio</h5>
+              <a href="#hero">Overview</a>
+              <a href="#experience">Kinetic Curls</a>
+              <a href="#philosophy">Philosophy</a>
+              <a href="#plans">Memberships</a>
+            </div>
+            <div class="footer-col">
+              <h5>Portal</h5>
+              <a href="#dashboard" class="footer-portal-link">Member Management</a>
+              <a href="#dashboard" class="footer-portal-link">Daily Attendance</a>
+              <a href="#dashboard" class="footer-portal-link">Weekly Analytics</a>
+              <button type="button" class="footer-reset-btn" id="footer-reset-data">Reset Demo Data</button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom container">
+          <p>&copy; 2026 REPZONE. Pure Vanilla HTML, CSS &amp; JavaScript. No external libraries.</p>
+          <div class="theme-note">Warm Minimalist Palette &bull; #F5F4EF &bull; Sage Green</div>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 2: MANAGEMENT DASHBOARD VIEW                     -->
+    <!-- ======================================================== -->
+    <div id="dashboard-view" class="view-section">
+      <div class="dashboard-shell container">
+        
+        <!-- Dashboard Top Header Bar -->
+        <div class="dashboard-header-bar">
+          <div class="dash-title-group">
+            <span class="dash-eyebrow">Studio Operations</span>
+            <h2 class="dash-title">Management Dashboard</h2>
+            <p class="dash-subtitle">Real-time attendance tracking, member lifecycle management, and studio capacity.</p>
+          </div>
+
+          <div class="dash-actions-group">
+            <button type="button" class="btn btn-secondary" id="btn-back-to-landing">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              View Studio Site
+            </button>
+            <button type="button" class="btn btn-primary" id="btn-open-add-member">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              Add New Member
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 KPI Stat Metric Cards -->
+        <section class="metrics-grid" aria-label="Key Performance Indicators">
+          
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-card-title">Total Members</span>
+              <span class="metric-icon-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+            </div>
+            <div class="metric-card-body">
+              <div class="metric-card-value" id="stat-total-members">--</div>
+              <div class="metric-trend positive">
+                <span class="trend-icon">&uarr;</span>
+                <span class="trend-text">+8.5% this month</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-card-title">Active Members</span>
+              <span class="metric-icon-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </span>
+            </div>
+            <div class="metric-card-body">
+              <div class="metric-card-value" id="stat-active-members">--</div>
+              <div class="metric-trend neutral">
+                <span class="trend-text" id="stat-active-rate">--% active roster</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-card-title">Today's Attendance</span>
+              <span class="metric-icon-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+            </div>
+            <div class="metric-card-body">
+              <div class="metric-card-value" id="stat-today-attendance">--</div>
+              <div class="metric-trend positive">
+                <span class="trend-text">Live check-in feed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-card-title">Expiring Memberships</span>
+              <span class="metric-icon-badge badge-warning">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+            </div>
+            <div class="metric-card-body">
+              <div class="metric-card-value" id="stat-expiring-members">--</div>
+              <div class="metric-trend warning">
+                <span class="trend-text">Within next 7 days</span>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Studio Live Capacity & Revenue Intelligence Row -->
+        <section class="dash-intelligence-grid" aria-label="Studio Intelligence">
+          
+          <!-- Live Capacity Meter -->
+          <div class="dash-surface-card capacity-meter-card">
+            <div class="card-top-bar">
+              <div>
+                <span class="section-tag" style="margin-bottom: 2px;">Studio Real-Time</span>
+                <h3 class="card-heading">Floor Capacity &amp; Flow</h3>
+              </div>
+              <span class="status-pill status-active" id="capacity-status-pill">
+                <span class="status-dot"></span>
+                <span id="capacity-status-text">Optimal Environment</span>
+              </span>
+            </div>
+
+            <div class="capacity-visual-container">
+              <div class="capacity-counts">
+                <div class="count-big">
+                  <span id="capacity-current-num">--</span>
+                  <span class="capacity-max">/ 35 Max</span>
+                </div>
+                <span class="capacity-percent-badge" id="capacity-percent">--% Occupancy</span>
+              </div>
+
+              <!-- Animated Progress Bar -->
+              <div class="capacity-progress-track">
+                <div class="capacity-progress-fill" id="capacity-fill-bar"></div>
+              </div>
+
+              <div class="capacity-footer-meta">
+                <span>Peak Load Windows: <strong>07:30 - 09:00 AM</strong> &bull; <strong>05:30 - 07:30 PM</strong></span>
+                <span class="space-indicator">Ample Rack &amp; Turf Space</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Revenue & Tier Breakdown -->
+          <div class="dash-surface-card revenue-breakdown-card">
+            <div class="card-top-bar">
+              <div>
+                <span class="section-tag" style="margin-bottom: 2px;">Financial Dynamics</span>
+                <h3 class="card-heading">Membership Distribution</h3>
+              </div>
+              <div class="mrr-badge">
+                <span class="mrr-label">Projected MRR</span>
+                <span class="mrr-amount" id="stat-mrr-val">$0</span>
+              </div>
+            </div>
+
+            <!-- Tier Distribution Segment Bar -->
+            <div class="tier-distribution-container">
+              <div class="tier-segmented-bar">
+                <div class="tier-segment segment-essential" id="seg-essential" title="Essential Tier"></div>
+                <div class="tier-segment segment-performance" id="seg-performance" title="Performance Tier"></div>
+                <div class="tier-segment segment-unlimited" id="seg-unlimited" title="Unlimited Tier"></div>
+              </div>
+
+              <div class="tier-legend-grid">
+                <div class="tier-legend-item">
+                  <span class="tier-color-dot dot-essential"></span>
+                  <div class="tier-legend-info">
+                    <span class="tier-legend-name">Essential</span>
+                    <span class="tier-legend-stats" id="legend-essential-stats">--</span>
+                  </div>
+                </div>
+
+                <div class="tier-legend-item">
+                  <span class="tier-color-dot dot-performance"></span>
+                  <div class="tier-legend-info">
+                    <span class="tier-legend-name">Performance</span>
+                    <span class="tier-legend-stats" id="legend-performance-stats">--</span>
+                  </div>
+                </div>
+
+                <div class="tier-legend-item">
+                  <span class="tier-color-dot dot-unlimited"></span>
+                  <div class="tier-legend-info">
+                    <span class="tier-legend-name">Unlimited</span>
+                    <span class="tier-legend-stats" id="legend-unlimited-stats">--</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Attendance Analytics & Quick Check-in Split Grid -->
+        <div class="dash-analytics-grid">
+          
+          <!-- Left: Weekly Attendance SVG Chart -->
+          <div class="dash-surface-card attendance-chart-card">
+            <div class="card-top-bar">
+              <div>
+                <h3 class="card-heading">Weekly Attendance</h3>
+                <p class="card-caption">Daily athlete visits over the current 7-day cycle</p>
+              </div>
+              <div class="chart-legend">
+                <span class="legend-dot"></span>
+                <span class="legend-text">Daily Check-ins</span>
+              </div>
+            </div>
+
+            <!-- Custom Pure SVG Chart (Rendered by dashboard.js) -->
+            <div class="chart-canvas-wrapper" id="weekly-chart-container">
+              <svg id="weekly-svg-chart" viewBox="0 0 650 240" preserveAspectRatio="none" aria-label="Weekly attendance bar chart"></svg>
+              <div id="chart-tooltip" class="chart-tooltip"></div>
+            </div>
+
+            <div class="chart-stats-summary">
+              <div class="summary-item">
+                <span class="summary-label">7-Day Total</span>
+                <span class="summary-val" id="chart-total-count">--</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Daily Average</span>
+                <span class="summary-val" id="chart-avg-count">--</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Peak Day</span>
+                <span class="summary-val" id="chart-peak-day">--</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Quick Check-in Station -->
+          <div class="dash-surface-card checkin-station-card">
+            <div class="card-top-bar">
+              <div>
+                <h3 class="card-heading">Quick Check-in</h3>
+                <p class="card-caption">Select an active athlete to record instantaneous entry</p>
+              </div>
+            </div>
+
+            <div class="quick-checkin-form">
+              <div class="form-group">
+                <label for="checkin-search-input" class="form-label">Search Athlete</label>
+                <div class="search-input-wrapper">
+                  <input type="text" id="checkin-search-input" class="form-control" placeholder="Search by name, email, or ID..." autocomplete="off">
+                  <div class="search-spinner" id="checkin-search-spinner"></div>
+                </div>
+                <!-- Dynamic Autocomplete Results Dropdown -->
+                <div class="autocomplete-dropdown" id="checkin-autocomplete" hidden></div>
+              </div>
+
+              <!-- Selected Athlete Preview Card -->
+              <div class="checkin-preview-card" id="checkin-preview-box">
+                <div class="preview-empty-state" id="checkin-empty-state">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <p>Type above to select an athlete for check-in</p>
+                </div>
+                <div class="preview-selected-athlete" id="checkin-selected-athlete" hidden>
+                  <div class="athlete-avatar-circle" id="checkin-athlete-avatar">JD</div>
+                  <div class="athlete-details">
+                    <h4 class="athlete-name" id="checkin-athlete-name">Athlete Name</h4>
+                    <span class="athlete-plan-pill" id="checkin-athlete-plan">Performance Plan</span>
+                    <span class="athlete-status-pill" id="checkin-athlete-status">Active</span>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-sm" id="btn-confirm-checkin">
+                    Record Check-in
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Today's Live Attendance Feed Snippet -->
+            <div class="recent-checkin-stream">
+              <div class="stream-header">
+                <h4 class="stream-title">Today's Check-ins</h4>
+                <span class="stream-badge" id="stream-count-badge">0 today</span>
+              </div>
+              <div class="stream-list" id="today-stream-list">
+                <!-- Dynamically populated by attendance.js -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Members Management Section -->
+        <section class="dash-surface-card members-management-card" id="members-section">
+          <div class="card-top-bar flex-wrap">
+            <div>
+              <h3 class="card-heading">Member Roster</h3>
+              <p class="card-caption">Manage studio memberships, monitor expiry dates, and review athlete statuses</p>
+            </div>
+
+            <!-- Table Controls: Search & Filters -->
+            <div class="table-controls-group">
+              <!-- Live Search -->
+              <div class="table-search-box">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="member-table-search" placeholder="Search members...">
+                <button type="button" class="clear-search-btn" id="btn-clear-search" aria-label="Clear search">&times;</button>
+              </div>
+
+              <!-- Status Filter Pills -->
+              <div class="filter-pills" id="status-filter-group">
+                <button type="button" class="filter-pill active" data-filter="all">All</button>
+                <button type="button" class="filter-pill" data-filter="active">Active</button>
+                <button type="button" class="filter-pill" data-filter="expiring">Expiring Soon</button>
+                <button type="button" class="filter-pill" data-filter="expired">Expired</button>
+                <button type="button" class="filter-pill" data-filter="in-studio">In Studio Today</button>
+              </div>
+
+              <!-- Plan Filter Dropdown -->
+              <div class="filter-dropdown-wrapper">
+                <select id="plan-filter-select" class="form-select-sm" aria-label="Filter by Membership Plan">
+                  <option value="all">All Plans</option>
+                  <option value="Essential">Essential</option>
+                  <option value="Performance">Performance</option>
+                  <option value="Unlimited">Unlimited</option>
+                </select>
+              </div>
+
+              <!-- Export CSV Button -->
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-export-csv" title="Export member roster as CSV">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                <span>Export CSV</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Members Table Container -->
+          <div class="table-responsive-container">
+            <table class="data-table" id="members-table">
+              <thead>
+                <tr>
+                  <th scope="col">Athlete</th>
+                  <th scope="col">Membership Plan</th>
+                  <th scope="col">Start Date</th>
+                  <th scope="col">Expiry Date</th>
+                  <th scope="col">Status</th>
+                  <th scope="col" class="text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="members-table-body">
+                <!-- Dynamically rendered by members.js -->
+              </tbody>
+            </table>
+
+            <!-- Empty State for Table -->
+            <div class="table-empty-state" id="table-empty-state" hidden>
+              <div class="empty-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <h4>No matching members found</h4>
+              <p>Adjust your search query or status filter to see other studio athletes.</p>
+              <button type="button" class="btn btn-outline btn-sm" id="btn-reset-filters">Reset Filters</button>
+            </div>
+          </div>
+
+          <!-- Table Footer Pagination / Count -->
+          <div class="table-footer-bar">
+            <span class="showing-count" id="table-showing-count">Showing 0 of 0 members</span>
+          </div>
+        </section>
+
+        <!-- Studio Guided Masterclasses & Kinetic Sessions -->
+        <section class="dash-surface-card sessions-management-card" id="sessions-section">
+          <div class="card-top-bar flex-wrap">
+            <div>
+              <span class="section-tag" style="margin-bottom: 2px;">Daily Timetable</span>
+              <h3 class="card-heading">Guided Kinetic Masterclasses</h3>
+              <p class="card-caption">Intimate, capped small-group biomechanical sessions for today</p>
+            </div>
+            <div class="session-badge-counter">
+              <span class="pulse-indicator"></span>
+              <span id="sessions-live-count">4 Sessions Scheduled</span>
+            </div>
+          </div>
+
+          <div class="sessions-grid" id="sessions-container">
+            <!-- Dynamically populated or rendered by dashboard.js -->
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- MODALS & OVERLAYS                                        -->
+  <!-- ======================================================== -->
+
+  <!-- 1. Add New Member Modal -->
+  <div class="modal-backdrop" id="add-member-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-add-title">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="modal-tag">New Registration</span>
+            <h3 class="modal-title" id="modal-add-title">Add Studio Member</h3>
+          </div>
+          <button type="button" class="modal-close-btn" id="btn-close-add-modal" aria-label="Close dialog">&times;</button>
+        </div>
+
+        <form id="add-member-form" novalidate>
+          <div class="modal-body">
+            
+            <div class="form-row">
+              <div class="form-group col-half">
+                <label for="input-first-name" class="form-label">First Name <span class="required">*</span></label>
+                <input type="text" id="input-first-name" class="form-control" placeholder="e.g. Marcus" required>
+                <span class="form-error" id="err-first-name"></span>
+              </div>
+              <div class="form-group col-half">
+                <label for="input-last-name" class="form-label">Last Name <span class="required">*</span></label>
+                <input type="text" id="input-last-name" class="form-control" placeholder="e.g. Vance" required>
+                <span class="form-error" id="err-last-name"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-half">
+                <label for="input-email" class="form-label">Email Address <span class="required">*</span></label>
+                <input type="email" id="input-email" class="form-control" placeholder="marcus@example.com" required>
+                <span class="form-error" id="err-email"></span>
+              </div>
+              <div class="form-group col-half">
+                <label for="input-phone" class="form-label">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="input-phone" class="form-control" placeholder="+1 (555) 234-5678" required>
+                <span class="form-error" id="err-phone"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-half">
+                <label for="select-plan" class="form-label">Membership Tier <span class="required">*</span></label>
+                <select id="select-plan" class="form-control" required>
+                  <option value="Essential">Essential ($120/mo)</option>
+                  <option value="Performance" selected>Performance ($220/mo)</option>
+                  <option value="Unlimited">Unlimited ($350/mo)</option>
+                </select>
+              </div>
+              <div class="form-group col-half">
+                <label for="select-duration" class="form-label">Duration <span class="required">*</span></label>
+                <select id="select-duration" class="form-control" required>
+                  <option value="1">1 Month</option>
+                  <option value="3" selected>3 Months (Quarterly)</option>
+                  <option value="6">6 Months (Biannual)</option>
+                  <option value="12">12 Months (Annual)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-half">
+                <label for="input-start-date" class="form-label">Start Date <span class="required">*</span></label>
+                <input type="date" id="input-start-date" class="form-control" required>
+                <span class="form-error" id="err-start-date"></span>
+              </div>
+              <div class="form-group col-half">
+                <label class="form-label">Computed Expiry Date</label>
+                <div class="computed-date-box" id="preview-expiry-date">--</div>
+                <small class="form-hint">Calculated automatically from start date & duration</small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="input-notes" class="form-label">Emergency Contact &amp; Physical Notes</label>
+              <textarea id="input-notes" class="form-control" rows="2" placeholder="Optional emergency phone, joint considerations, or training goals..."></textarea>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline" id="btn-cancel-add-modal">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="btn-submit-member">Register Member</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Member Detail Drawer / Modal -->
+  <div class="modal-backdrop" id="member-detail-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-detail-name">
+    <div class="modal-dialog modal-dialog-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="modal-tag">Athlete Dossier</span>
+            <h3 class="modal-title" id="modal-detail-name">Athlete Profile</h3>
+          </div>
+          <button type="button" class="modal-close-btn" id="btn-close-detail-modal" aria-label="Close dialog">&times;</button>
+        </div>
+
+        <div class="modal-body" id="member-detail-body">
+          <!-- Populated by members.js -->
+        </div>
+
+        <div class="modal-footer justify-between">
+          <button type="button" class="btn btn-danger-outline" id="btn-delete-member-detail">Delete Member</button>
+          <div class="flex-actions">
+            <button type="button" class="btn btn-outline" id="btn-renew-from-detail">Renew Plan</button>
+            <button type="button" class="btn btn-outline" id="btn-close-detail-footer">Close</button>
+            <button type="button" class="btn btn-primary" id="btn-checkin-from-detail">Check In Athlete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Renew Membership Modal -->
+  <div class="modal-backdrop" id="renew-member-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-renew-title">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="modal-tag">Membership Extension</span>
+            <h3 class="modal-title" id="modal-renew-title">Renew Membership</h3>
+          </div>
+          <button type="button" class="modal-close-btn" id="btn-close-renew-modal" aria-label="Close dialog">&times;</button>
+        </div>
+
+        <form id="renew-member-form">
+          <input type="hidden" id="renew-member-id">
+          <div class="modal-body">
+            <div class="renew-athlete-summary" id="renew-athlete-summary">
+              <!-- Filled dynamically with athlete name and current expiry -->
+            </div>
+
+            <div class="form-group">
+              <label for="renew-select-duration" class="form-label">Extend Duration <span class="required">*</span></label>
+              <select id="renew-select-duration" class="form-control" required>
+                <option value="1">1 Month Extension</option>
+                <option value="3" selected>3 Months (Quarterly Renewal)</option>
+                <option value="6">6 Months (Biannual Renewal)</option>
+                <option value="12">12 Months (Full Annual Renewal)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="renew-select-tier" class="form-label">Membership Tier</label>
+              <select id="renew-select-tier" class="form-control">
+                <option value="Essential">Essential ($120/mo)</option>
+                <option value="Performance">Performance ($220/mo)</option>
+                <option value="Unlimited">Unlimited ($350/mo)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">New Computed Expiry Date</label>
+              <div class="computed-date-box" id="renew-preview-expiry">--</div>
+              <small class="form-hint">Calculated automatically from current date or today if expired</small>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline" id="btn-cancel-renew-modal">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="btn-submit-renewal">Confirm Renewal</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notifications Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Application Scripts (Vanilla JS Modules) -->
+  <script src="js/app.js"></script>
+  <script src="js/scroll-effects.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/members.js"></script>
+  <script src="js/attendance.js"></script>
+</body>
+</html>
