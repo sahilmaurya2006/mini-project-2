@@ -409,6 +409,7 @@ button {
   display: none;
   opacity: 0;
   transition: opacity var(--transition-base);
+  scroll-margin-top: 80px;
 }
 
 .view-section.active-view {

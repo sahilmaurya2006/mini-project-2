@@ -5,6 +5,7 @@
 
 .dashboard-shell {
   padding: var(--space-3xl) var(--space-xl) var(--space-4xl);
+  scroll-margin-top: 80px;
 }
 
 /* Dashboard Top Header Bar */

@@ -332,7 +332,11 @@ window.REPZONE = window.REPZONE || {};
       landingView.classList.remove('active-view');
       dashboardView.classList.add('active-view');
       if (toggleText) toggleText.textContent = 'Studio Site';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      // Ensure instantaneous scroll to true top
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
 
       // Highlight portal link
       navLinks.forEach(link => {
@@ -347,6 +351,11 @@ window.REPZONE = window.REPZONE || {};
       dashboardView.classList.remove('active-view');
       landingView.classList.add('active-view');
       if (toggleText) toggleText.textContent = 'Gym Portal';
+
+      // Ensure instantaneous scroll to true top
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
 
       // Highlight active nav link
       navLinks.forEach(link => {
@@ -559,6 +568,11 @@ window.REPZONE = window.REPZONE || {};
         }, 150);
       });
     });
+
+    // Check initial hash
+    if (window.location.hash === '#dashboard') {
+      setView('dashboard');
+    }
   }
 
   // Export to namespace

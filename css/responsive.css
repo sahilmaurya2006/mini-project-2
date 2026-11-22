@@ -467,7 +467,8 @@
 
   /* Management Dashboard on phone */
   .dashboard-shell {
-    padding: var(--space-lg) var(--space-sm) var(--space-3xl);
+    padding: calc(var(--space-xl) + 8px) var(--space-md) var(--space-3xl);
+    scroll-margin-top: 80px;
   }
 
   .dashboard-header-bar {
@@ -475,47 +476,162 @@
     padding-bottom: var(--space-md);
   }
 
+  .dash-title-group {
+    width: 100%;
+  }
+
+  .dash-eyebrow {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.72rem;
+  }
+
   .dash-title {
-    font-size: 2rem;
+    font-size: 1.85rem;
+    line-height: 1.15;
+    margin-bottom: 6px;
+  }
+
+  .dash-subtitle {
+    font-size: 0.88rem;
+    line-height: 1.45;
   }
 
   .dash-actions-group {
     width: 100%;
     flex-direction: column;
     gap: var(--space-sm);
+    margin-top: var(--space-sm);
   }
 
   .dash-actions-group .btn {
     width: 100%;
-    min-height: 44px;
+    min-height: 46px;
+    font-size: 0.9rem;
   }
 
   /* 2x2 Metric Cards Grid on phone */
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-sm);
+    gap: 12px;
     margin-bottom: var(--space-lg);
   }
 
   .metric-card {
-    padding: var(--space-md);
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 124px;
+  }
+
+  .metric-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    min-height: 32px;
   }
 
   .metric-card-title {
     font-size: 0.68rem;
+    line-height: 1.25;
+    flex: 1;
+    padding-right: 4px;
   }
 
   .metric-icon-badge {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+  }
+
+  .metric-card-body {
+    display: flex;
+    flex-direction: column;
   }
 
   .metric-card-value {
     font-size: 1.85rem;
+    line-height: 1;
+    margin-bottom: 4px;
   }
 
   .metric-trend {
     font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  /* Floor Capacity Card on phone */
+  .capacity-meter-card .card-top-bar {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 8px;
+  }
+
+  .capacity-meter-card .card-heading {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  #capacity-status-pill {
+    font-size: 0.68rem;
+    padding: 3px 8px;
+    white-space: nowrap;
+  }
+
+  .capacity-counts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #capacity-current-num {
+    font-size: 2.2rem;
+  }
+
+  .capacity-percent-badge {
+    font-size: 0.75rem;
+  }
+
+  /* Fix footer meta text collision */
+  .capacity-footer-meta {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    padding-top: 10px !important;
+  }
+
+  .capacity-footer-meta span:first-child {
+    line-height: 1.45;
+  }
+
+  .space-indicator {
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  /* Revenue Breakdown & MRR Card on phone */
+  .revenue-breakdown-card .card-top-bar {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 8px;
+  }
+
+  .revenue-breakdown-card .card-heading {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .mrr-badge {
+    align-items: flex-end;
+  }
+
+  .mrr-amount {
+    font-size: 1.5rem;
   }
 
   /* Attendance Card on phone */
